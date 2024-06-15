@@ -1,0 +1,18 @@
+{
+    "name": "netonevess/http-status-codes-php",
+    "description": "This project aims to stop using integers as http status code when returning a response to the client, to make our code more human readable.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Netonevess\\HttpStatusCodesPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alvaro Neves",
+            "email": "alvinhoo.mota@gmail.com"
+        }
+    ],
+    "require": {}
+}
