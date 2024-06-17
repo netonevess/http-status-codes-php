@@ -15,6 +15,14 @@
             "email": "alvinhoo.mota@gmail.com"
         }
     ],
+    "scripts": {
+        "psalm": "vendor/bin/phpstan analyse src tests",
+        "phpstan": "vendor/bin/phpstan analyse src tests",
+        "phpcs": "vendor/bin/phpcs src tests",
+        "phpcbf": "vendor/bin/phpcbf src tests",
+        "cs-src": "vendor/bin/php-cs-fixer --rules=@PSR12 --dry-run fix src",
+        "cs-tests": "vendor/bin/php-cs-fixer --rules=@PSR12 --dry-run fix tests"
+    },
     "require": {
         "league/csv": "^9.0",
         "guzzlehttp/guzzle": "^7.8",
@@ -22,6 +30,9 @@
         "league/flysystem": "^3.0"
     },
     "require-dev": {
-        "vimeo/psalm": "^5.24"
+        "vimeo/psalm": "^5.24",
+        "phpstan/phpstan": "^1.11",
+        "friendsofphp/php-cs-fixer": "^3.59",
+        "squizlabs/php_codesniffer": "^3.10"
     }
 }
