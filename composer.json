@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Netonevess\\HttpStatusCodesPhp\\": "src/"
+            "Netonevess\\HttpStatusCodesPhp\\": "src/",
+            "Netonevess\\ToolsHttpStatusCodesPhp\\": "tools/"
         }
     },
     "authors": [
@@ -14,5 +15,13 @@
             "email": "alvinhoo.mota@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "league/csv": "^9.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "vlucas/phpdotenv": "^5.6",
+        "league/flysystem": "^3.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^5.24"
+    }
 }

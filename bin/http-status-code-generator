@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+
+$csvPath = 'var/http-status-codes-1.csv';
+$processor = new Netonevess\ToolsHttpStatusCodesPhp\Processor\IanaOrgCSVProcessor($csvPath);
+
+$classCreator = new \Netonevess\ToolsHttpStatusCodesPhp\StatusCodeEnumCreator();
+foreach ($processor->getCsvProcessFormatted() as $statusCode) {
+    $classCreator->addSection($statusCode);
+}
+
+$classCreator->saveClass();
